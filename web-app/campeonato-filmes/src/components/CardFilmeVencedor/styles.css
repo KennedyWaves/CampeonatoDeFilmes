@@ -1,0 +1,27 @@
+.card-conteudo-vencedor{
+    margin-top: 10px;
+    cursor: default;
+}
+
+.info-titulo-vencedor{
+    margin-left: 15px;
+}
+
+.card-posicao h1{
+    text-align: center;
+    font-family: 'IBM Plex Serif';
+}
+
+.card-posicao{
+    width: 60px;
+    height: 100%;
+    background-color: #696969;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteudo-resultado{
+    margin-top: 10px;
+}

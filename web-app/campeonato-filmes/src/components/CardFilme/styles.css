@@ -1,0 +1,26 @@
+.card-info{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 4px;
+    height: fit-content;
+}
+
+.info{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.info h5{
+    margin-bottom: 10px !important;
+}
+
+.info h6{
+    color: #505050;
+}
+.card-checkbox{
+    height: 100%;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

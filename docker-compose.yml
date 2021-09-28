@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+    web_app:
+        build:
+            context: ./web-app/campeonato-filmes/
+            dockerfile: Dockerfile
+        depends_on:
+            - "api"
+        ports:
+            - "7894:80"
+    api:
+        build:
+          context: ./Api/CampeonatoFilmesApi/
+          dockerfile: Dockerfile
+        ports:
+            - "7654:80"
