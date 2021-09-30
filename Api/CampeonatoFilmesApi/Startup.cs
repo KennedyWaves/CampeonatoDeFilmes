@@ -1,7 +1,5 @@
-using CampeonatoFilmesApi.Data.Repository;
-using CampeonatoFilmesApi.Data.Repository.Implementations;
+using CampeonatoFilmesApi.Data;
 using CampeonatoFilmesApi.Service;
-using CampeonatoFilmesApi.Service.Implementations;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;

@@ -1,8 +1,6 @@
 ﻿using CampeonatoFilmesApi.Controllers;
-using CampeonatoFilmesApi.Data.Repository;
-using CampeonatoFilmesApi.Data.Repository.Implementations;
+using CampeonatoFilmesApi.Data;
 using CampeonatoFilmesApi.Service;
-using CampeonatoFilmesApi.Service.Implementations;
 using Microsoft.Extensions.Logging;
 using Moq;
 

@@ -1,4 +1,4 @@
-﻿using CampeonatoFilmesApi.Domain.Entities;
+﻿using CampeonatoFilmesApi.Domain;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Diagnostics;

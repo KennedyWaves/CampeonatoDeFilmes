@@ -1,4 +1,4 @@
-﻿namespace CampeonatoFilmesApi.Domain.Entities
+﻿namespace CampeonatoFilmesApi.Domain
 {
     /// <summary>
     /// Entidade que representa um Filme.

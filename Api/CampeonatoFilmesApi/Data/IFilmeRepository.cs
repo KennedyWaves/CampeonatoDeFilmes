@@ -1,7 +1,7 @@
-﻿using CampeonatoFilmesApi.Domain.Entities;
+﻿using CampeonatoFilmesApi.Domain;
 using System.Collections.Generic;
 
-namespace CampeonatoFilmesApi.Data.Repository
+namespace CampeonatoFilmesApi.Data
 {
     /// <summary>
     /// Interface de obtenção de dados da entidade Filme.

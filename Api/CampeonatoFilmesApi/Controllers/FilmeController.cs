@@ -1,4 +1,4 @@
-﻿using CampeonatoFilmesApi.Domain.Entities;
+﻿using CampeonatoFilmesApi.Domain;
 using CampeonatoFilmesApi.Service;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -44,16 +44,8 @@ namespace CampeonatoFilmesApi.Controllers
         [ProducesResponseType(500)]
         public IActionResult GetAll()
         {
-            try
-            {
-                List<Filme> lista = Service.GetAll();
-                return Ok(lista);
-            }
-            catch (Exception ex)
-            {
-                Logger.LogError(ex.ToString());
-                return StatusCode((int)HttpStatusCode.InternalServerError, ex.Message);
-            }
+            List<Filme> lista = Service.GetAll();
+            return Ok(lista);
         }
         /// <summary>
         /// Fornece o resultado do campeonato de filmes.
@@ -66,31 +58,16 @@ namespace CampeonatoFilmesApi.Controllers
         /// </returns>
         [Route("campeonato")]
         [HttpPost]
-        [ProducesResponseType((200), Type = typeof(List<Filme>))]
-        [ProducesResponseType(400)]
-        [ProducesResponseType(500)]
         public IActionResult Campeonato([FromBody] List<Filme> filmes)
         {
-            try
+            if (Service.ValidaListaCampeonato(filmes))
             {
                 List<Filme> lista = Service.ExecutaCampeonato(filmes);
                 return Ok(lista);
-
             }
-            catch (ArgumentException ex)
+            else
             {
-                Logger.LogError(ex.ToString());
-                return BadRequest(ex.Message);
-            }
-            catch (InvalidOperationException ex)
-            {
-                Logger.LogError(ex.ToString());
-                return BadRequest(ex.Message);
-            }
-            catch (Exception ex)
-            {
-                Logger.LogError(ex.ToString());
-                return StatusCode((int)HttpStatusCode.InternalServerError, ex.Message);
+                return BadRequest("A quantidade de filmes exigida é 8");
             }
         }
     }

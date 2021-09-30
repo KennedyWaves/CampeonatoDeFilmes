@@ -1,4 +1,4 @@
-﻿using CampeonatoFilmesApi.Domain.Entities;
+﻿using CampeonatoFilmesApi.Domain;
 using System.Collections.Generic;
 
 namespace CampeonatoFilmesApi.Service
@@ -8,6 +8,12 @@ namespace CampeonatoFilmesApi.Service
     /// </summary>
     public interface IFilmeService
     {
+        /// <summary>
+        /// Executa validação da lista a partir de critérios predefinidos de aceitabilidade.
+        /// </summary>
+        /// <param name="filmes">Lista de filmes a ser validada.</param>
+        /// <returns>True: Lista é válida<br/>False: Lista é inválida.</returns>
+        public bool ValidaListaCampeonato(List<Filme> filmes);
         /// <summary>
         /// Retorna todos os registros de Filme.
         /// </summary>
